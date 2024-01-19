@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class BunTest {
-    private static RandomStringUtils randomStringUtils = new RandomStringUtils();
     private static Random random = new Random();
     private String name;
     private float price;
@@ -24,8 +23,8 @@ public class BunTest {
     @Parameterized.Parameters
     public static Object[][] getParameters() {
         return new Object[][]{
-                {randomStringUtils.randomAlphabetic(10), random.nextFloat()},
-                {randomStringUtils.randomAlphabetic(10), 700.000000000F}
+                {RandomStringUtils.randomAlphabetic(10), random.nextFloat()},
+                {RandomStringUtils.randomAlphabetic(10), 700.000000000F}
         };
     }
 

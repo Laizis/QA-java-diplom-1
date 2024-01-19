@@ -11,7 +11,6 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class IngredientTest {
-    private final static RandomStringUtils randomStringUtils = new RandomStringUtils();
     private final static Random random = new Random();
     private Ingredient ingredient;
     private final IngredientType ingredientType;
@@ -27,8 +26,8 @@ public class IngredientTest {
     @Parameterized.Parameters
     public static Object[][] createIngredient() {
         return new Object[][]{
-                {IngredientType.FILLING, randomStringUtils.randomAlphabetic(10), random.nextFloat()},
-                {IngredientType.SAUCE, randomStringUtils.randomAlphabetic(10), random.nextFloat()}
+                {IngredientType.FILLING, RandomStringUtils.randomAlphabetic(10), random.nextFloat()},
+                {IngredientType.SAUCE, RandomStringUtils.randomAlphabetic(10), random.nextFloat()}
         };
     }
 
